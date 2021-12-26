@@ -11,10 +11,13 @@ public class Time {
 
     public Time(int totalTimeInSeconds) {
 
+        hour = totalTimeInSeconds / 3600;
+        minute = totalTimeInSeconds % 3600 / 60;
+        second = totalTimeInSeconds % 3600 % 60;
     }
 
     public int convertToSeconds() {
-        return 1;
+        return (hour * 3600) + (minute * 60) + second;
     }
 
     public boolean isBefore(Time time) {
