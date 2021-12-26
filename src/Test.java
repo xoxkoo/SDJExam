@@ -4,5 +4,6 @@ public class Test {
         Date date2 = new Date(15,1, 2022);
 
         System.out.println(date.numberOfDaysUntil(date2));
+        date.today();
     }
 }

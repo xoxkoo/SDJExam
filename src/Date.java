@@ -1,4 +1,5 @@
-import java.util.Objects;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Date {
 
@@ -23,9 +24,16 @@ public class Date {
             return false;
     }
 
-    //TODO
     public boolean isLeapYear() {
-        return false;
+        if (year % 4 != 0) {
+            return false;
+        } else if (year % 400 == 0) {
+            return true;
+        } else if (year % 100 == 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public int daysInMonth() {
@@ -70,10 +78,9 @@ public class Date {
             return -1;
     }
 
-
-    //TODO
     public Date today() {
-
+        GregorianCalendar currentDate = new GregorianCalendar();
+        return new Date(currentDate.get(GregorianCalendar.DATE), currentDate.get(GregorianCalendar.MONTH) + 1, currentDate.get(GregorianCalendar.YEAR));
     }
 
     public Date copy() {
