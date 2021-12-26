@@ -29,8 +29,23 @@ public class Time {
     }
 
     public Time timeUntil(Time time) {
-        if (isBefore(time))
-            return new Time(hour - time.hour, time.minute, this.second);
+        if (isBefore(time)) {
+            int hUntil = time.hour - hour;
+            int mUntil = 0;
+            int sUntil = 0;
+
+            if (time.minute < minute)
+                mUntil = 60 - minute + time.minute;
+            else
+                mUntil = time.minute - minute;
+
+            if (time.second < second)
+                sUntil = 60 - second + time.second;
+            else
+                sUntil = time.second - second;
+
+            return new Time(hUntil, mUntil, sUntil);
+        }
         else
             return new Time(0,0,0);
     }
