@@ -2,7 +2,7 @@ public class Grade {
     private int grade;
     private  Course course;
 
-    public Grade(int grade, Cource course) {
+    public Grade(int grade, Course course) {
         this.grade = grade;
         this.course = course;
     }

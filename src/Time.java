@@ -14,9 +14,7 @@ public class Time {
     }
 
     public int convertToSeconds() {
-        int timeInSeconds;
-
-        return timeInSeconds;
+        return 1;
     }
 
     public boolean isBefore(Time time) {
@@ -32,9 +30,9 @@ public class Time {
 
     public Time timeUntil(Time time) {
         if (isBefore(time))
-            return new Time(hour - time.hour, time.minute);
+            return new Time(hour - time.hour, time.minute, this.second);
         else
-            new Time(0,0,0);
+            return new Time(0,0,0);
     }
 
     public Time copy() {
