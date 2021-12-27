@@ -19,4 +19,8 @@ public class Resource {
 
         return fileName == res.fileName && extension == res.extension;
     }
+
+    public String toString () {
+        return fileName + "." + extension;
+    }
 }

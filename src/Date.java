@@ -78,7 +78,7 @@ public class Date {
             return -1;
     }
 
-    public Date today() {
+    public static Date today() {
         GregorianCalendar currentDate = new GregorianCalendar();
         return new Date(currentDate.get(GregorianCalendar.DATE), currentDate.get(GregorianCalendar.MONTH) + 1, currentDate.get(GregorianCalendar.YEAR));
     }
@@ -96,6 +96,6 @@ public class Date {
     }
 
     public String toString() {
-        return day + "." + month + "." + year;
+        return day + "/" + month + "/" + year;
     }
 }

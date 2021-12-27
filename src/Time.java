@@ -50,7 +50,7 @@ public class Time {
             return new Time(hUntil, mUntil, sUntil);
         }
         else
-            return new Time(0,0,0);
+            return null;
     }
 
     public Time copy() {
