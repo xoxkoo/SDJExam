@@ -14,6 +14,7 @@ public class Test {
         list.add(resource1);
 
         Lesson lesson = new Lesson("asdasd", date, time1, time2, list);
+        Lesson lesson1 = new Lesson("idk", date2, time1, time2, list);
 
         System.out.println(lesson);
 
@@ -24,6 +25,12 @@ public class Test {
         student.addGrade(1, new Course("SDJ"));
         student.addGrade(3, new Course("SDJ"));
         student.addGrade(2, new Course("SDJ"));
+
+        Course sdj = new Course("SDJ");
+        sdj.addLesson(lesson);
+        sdj.addLesson(lesson1);
+
+        System.out.println(sdj.getOnlineLesson());
 
         System.out.println(student.getGradeAverage());
     }
