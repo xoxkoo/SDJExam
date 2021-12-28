@@ -27,6 +27,7 @@ public class ZoomLesson extends OnlineLesson{
             return false;
 
         ZoomLesson other = (ZoomLesson) obj;
+        return true;
      }
 
     public String toString() {

@@ -21,7 +21,7 @@ public class DiscordLesson extends OnlineLesson {
             return false;
 
         OnlineLesson other = (DiscordLesson) obj;
-
+        return true;
     }
 
     public String toString() {
