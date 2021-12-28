@@ -18,7 +18,7 @@ public class ZoomLesson extends OnlineLesson{
         return brekoutRooms;
     }
 
-     public String nameOfSoftware() {
+     public String nameOfTheSoftware() {
         return "Zoom";
      }
 

@@ -12,7 +12,7 @@ public class DiscordLesson extends OnlineLesson {
         return channelName;
     }
 
-    public String nameOfSoftware() {
+    public String nameOfTheSoftware() {
         return "Discord";
     }
 

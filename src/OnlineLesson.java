@@ -12,9 +12,7 @@ public abstract class OnlineLesson extends Lesson {
         return cameraRequired;
     }
 
-    public static String nameOfTheSoftware() {
-
-    }
+    public abstract String nameOfTheSoftware();
 
     public boolean equals(Object obj) {
         if (! (obj instanceof OnlineLesson))
