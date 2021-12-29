@@ -27,7 +27,7 @@ public class ZoomLesson extends OnlineLesson{
             return false;
 
         ZoomLesson other = (ZoomLesson) obj;
-        return true;
+        return super.equals(other) && link.equals(other.getLink()) && brekoutRooms == other.brekoutRooms;
      }
 
     public String toString() {

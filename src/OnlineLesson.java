@@ -20,7 +20,7 @@ public abstract class OnlineLesson extends Lesson {
 
         OnlineLesson other = (OnlineLesson) obj;
 
-        return false;
+        return super.equals(other) && cameraRequired == other.cameraRequired;
     }
 
     public String toString() {

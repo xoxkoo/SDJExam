@@ -44,7 +44,7 @@ public class Student {
         return coronaPassport;
     }
 
-    public boolean hasValidCoronnaPassport() {
+    public boolean hasValidCoronaPassport() {
         Date date = coronaPassport.getDate();
         if (! date.isBefore(date.today()))
             return false;
@@ -66,7 +66,6 @@ public class Student {
             sum += grade.getGrade();
             i++;
         }
-        System.out.println(sum);
 
         return sum / i;
     }

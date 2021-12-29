@@ -47,13 +47,47 @@ public class Course {
         return topics;
     }
 
-    public ArrayList<OnlineLesson> getOnlineLesson() {
+    public ArrayList<OnlineLesson> getOnlineLessons() {
         ArrayList<OnlineLesson> lessons = new ArrayList<>();
 
         for (Lesson lesson : schedule) {
-
+            if (lesson instanceof OnlineLesson)
+                lessons.add((OnlineLesson) lesson);
         }
 
+        return lessons;
+    }
+
+    public ArrayList<OnlineLesson> getOnlineLessonsWithCameraRequired() {
+        ArrayList<OnlineLesson> lessons = getOnlineLessons();
+
+        for (OnlineLesson lesson : lessons) {
+            if ( ! lesson.isCameraRequired())
+                lessons.remove(lesson);
+        }
+
+        return lessons;
+    }
+
+    public ArrayList<DiscordLesson> getDiscordLessons() {
+        ArrayList<DiscordLesson> lessons = new ArrayList<>();
+
+        for (Lesson lesson : schedule) {
+            if (lesson instanceof DiscordLesson)
+                lessons.add((DiscordLesson) lesson);
+
+        }
+        return lessons;
+    }
+
+    public ArrayList<ZoomLesson> getZoomLessonsWithBreakoutRooms() {
+        ArrayList<ZoomLesson> lessons = new ArrayList<>();
+
+        for (Lesson lesson : schedule) {
+            if (lesson instanceof ZoomLesson && ((ZoomLesson) lesson).usesBreakoutRooms())
+                lessons.add((ZoomLesson) lesson);
+
+        }
         return lessons;
     }
 

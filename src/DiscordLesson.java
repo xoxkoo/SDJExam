@@ -20,8 +20,8 @@ public class DiscordLesson extends OnlineLesson {
         if (! (obj instanceof DiscordLesson))
             return false;
 
-        OnlineLesson other = (DiscordLesson) obj;
-        return true;
+        DiscordLesson other = (DiscordLesson) obj;
+        return super.equals(other) && channelName.equals(other.channelName);
     }
 
     public String toString() {
