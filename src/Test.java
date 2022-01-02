@@ -30,7 +30,7 @@ public class Test {
         sdj.addLesson(lesson);
         sdj.addLesson(lesson1);
 
-        System.out.println(sdj.getOnlineLessons());
+        System.out.println(Date.today());
 
         System.out.println(student.getGradeAverage());
     }

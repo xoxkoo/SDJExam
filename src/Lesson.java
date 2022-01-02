@@ -10,10 +10,17 @@ public class Lesson {
     public Lesson(String topic, Date date, Time start, Time end, ArrayList<Resource> resources) {
         if (hasValidTime(start, end)) {
             this.topic = topic;
-            this.date = date;
-            this.start = start;
-            this.end = end;
+            this.date = date.copy();
+            this.start = start.copy();
+            this.end = end.copy();
             this.resources = resources;
+        }
+        else {
+            this.topic = null;
+            this.date = null;
+            this.start = null;
+            this.end = null;
+            this.resources = null;
         }
     }
 
@@ -21,7 +28,7 @@ public class Lesson {
         return topic;
     }
     public Date getDate() {
-        return date;
+        return date.copy();
     }
     public ArrayList<Resource> getResources() {
         return resources;

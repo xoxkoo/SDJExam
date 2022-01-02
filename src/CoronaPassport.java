@@ -4,7 +4,7 @@ public class CoronaPassport {
 
     public CoronaPassport(String reason, Date date) {
         this.reason = reason;
-        this.date = date;
+        this.date = date.copy();
     }
 
     public String getReason() {
