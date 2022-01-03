@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class ZoomLesson extends OnlineLesson{
     private String link;
-    private boolean brekoutRooms;
+    private boolean breakoutRooms;
 
     public ZoomLesson(String topic, Date date, Time start, Time end, ArrayList<Resource> resources, boolean camera, String link, boolean breakout) {
         super(topic, date, start, end, resources, camera);
         this.link = link;
-        this.brekoutRooms = breakout;
+        this.breakoutRooms = breakout;
     }
 
     public String getLink() {
@@ -15,7 +15,7 @@ public class ZoomLesson extends OnlineLesson{
     }
 
     public boolean usesBreakoutRooms() {
-        return brekoutRooms;
+        return breakoutRooms;
     }
 
      public String nameOfTheSoftware() {
@@ -27,7 +27,7 @@ public class ZoomLesson extends OnlineLesson{
             return false;
 
         ZoomLesson other = (ZoomLesson) obj;
-        return super.equals(other) && link.equals(other.getLink()) && brekoutRooms == other.brekoutRooms;
+        return super.equals(other) && link.equals(other.getLink()) && breakoutRooms == other.breakoutRooms;
      }
 
     public String toString() {
